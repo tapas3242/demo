@@ -1,0 +1,26 @@
+<!--
+  Generated template for the TrendingDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Trending Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div text-center>
+      <img *ngIf="itemDetails.username != ''" class="img-hieght" src="{{itemDetails.user?.banner_image}}">
+      <img *ngIf="itemDetails.username == ''" class="img-hieght" src="../../assets/imgs/default.png">
+  </div>
+  <div padding>
+      <h2>{{itemDetails.title}}</h2>
+      <p>Import Datetime: {{itemDetails.import_datetime}}</p>
+      <p>Slug: {{itemDetails.slug}}</p>
+      <p>Source URL: {{itemDetails.source}}</p>
+      <p>Type: {{itemDetails.type}}</p>
+  </div>
+   
+</ion-content>
